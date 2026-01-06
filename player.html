@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title id="pageTitle">StreamHub — Player</title>
+  <meta name="description" id="metaDescription" content="StreamHub player." />
+  <link rel="canonical" href="" id="canonicalLink" />
+  <!-- Default OG (will be updated via JS for each content) -->
+  <meta property="og:site_name" content="StreamHub" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="StreamHub Player" id="ogTitle" />
+  <meta property="og:description" content="Watch — StreamHub" id="ogDesc" />
+  <meta property="og:image" content="https://i.imgur.com/3ZQ3ZKq.jpg" id="ogImage" />
+  <meta name="twitter:card" content="player" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="preconnect" href="https://api.themoviedb.org" />
+  <link rel="preconnect" href="https://image.tmdb.org" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">StreamHub</a>
+      <div class="header-actions">
+        <button id="shareBtn" class="nav-btn">Share</button>
+        <button id="backBtn" class="nav-btn">Back</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <article class="player-article">
+      <div id="player" class="player">
+        <div class="player-surface" id="playerSurface" role="button" tabindex="0" aria-label="Play content">
+          <div class="play-center"><button class="play-circle" id="playBtn"><i class="fas fa-play"></i></button></div>
+          <div class="player-controls">
+            <div class="progress"><div id="progFill" class="prog-fill" style="width:0%"></div></div>
+            <div class="controls-row">
+              <div class="left">
+                <button class="icon-btn"><i class="fas fa-play"></i></button>
+                <button class="icon-btn"><i class="fas fa-volume-up"></i></button>
+                <div id="timeLabel">0:00 / 0:00</div>
+              </div>
+              <div class="right">
+                <button id="expandBtn" class="icon-btn"><i class="fas fa-expand"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta" id="metaBlock">
+        <h1 id="title">Loading...</h1>
+        <p id="desc" class="muted">—</p>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Episodes</h2>
+          <select id="seasonSelect" style="display:none"></select>
+        </div>
+        <div id="episodesList" class="list"></div>
+      </div>
+
+      <div id="adSlot" class="ad ad-inline">
+        <div class="ad-placeholder">CPM Ad slot — paste Terra ad script here</div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year2"></span> StreamHub — Demo</small>
+    </div>
+  </footer>
+
+  <script>
+    window.SITE_CONFIG = {
+      API_KEY: "22be462e6d3de1dbab03d1ca50847b5a",
+      CPA_LINK: "https://profita.g2afse.com/sl?id=61a6278e76d3de426db577cb&pid=2320&sub2=de",
+      IMG_ORIG: "https://image.tmdb.org/t/p/original"
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+  <script src="assets/player.js" defer></script>
+</body>
+</html>
