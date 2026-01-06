@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title id="pageTitle">Streamly — Player</title>
+  <meta name="description" content="Watch now on Streamly." />
+  <link rel="canonical" href="https://yourdomain.com/player.html" />
+
+  <!-- Open Graph for player -->
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="Streamly — Watch" />
+  <meta property="og:description" content="Watch movies & TV shows on Streamly. Sign up to access exclusive content." />
+  <meta property="og:image" content="https://yourdomain.com/assets/og-image.jpg" />
+  <meta name="twitter:card" content="player" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">Streamly</a>
+      <nav class="nav">
+        <a class="btn secondary" href="/signup.html" id="signup-btn2">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container player-page">
+    <div id="movie-info" class="movie-info">
+      <div class="video-wrap">
+        <video id="videoPlayer" controls poster="assets/placeholder.jpg" width="100%">
+          <source id="video-source" src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <aside class="details">
+        <h1 id="title">Loading…</h1>
+        <p id="overview"></p>
+        <div class="cta">
+          <a id="affiliate-cta" class="btn primary" href="#" target="_blank" rel="noopener">Watch Now</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="copyright">© <span id="year2"></span> Streamly.</div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="js/player.js"></script>
+</body>
+</html>
